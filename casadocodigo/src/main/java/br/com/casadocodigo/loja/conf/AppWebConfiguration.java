@@ -17,7 +17,6 @@ public class AppWebConfiguration {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix( ".jsp");
-		
 		return resolver;
 	}
 
