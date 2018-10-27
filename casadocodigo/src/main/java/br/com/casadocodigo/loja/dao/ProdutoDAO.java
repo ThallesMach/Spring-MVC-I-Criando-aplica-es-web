@@ -12,6 +12,7 @@ import br.com.casadocodigo.loja.models.Produto;
 @Transactional
 public class ProdutoDAO {
 
+	
 	@PersistenceContext
 	private EntityManager manager;
 	
