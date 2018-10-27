@@ -14,7 +14,6 @@ import br.com.casadocodigo.loja.models.Produto;
 @Transactional
 public class ProdutoDAO {
 
-	
 	@PersistenceContext
 	private EntityManager manager;
 	
@@ -23,9 +22,7 @@ public class ProdutoDAO {
 	}
 
 	public List<Produto> listar() {
-		
 		return manager.createQuery("select p from Produto p", Produto.class)
 				.getResultList();
 	}
-	
 }

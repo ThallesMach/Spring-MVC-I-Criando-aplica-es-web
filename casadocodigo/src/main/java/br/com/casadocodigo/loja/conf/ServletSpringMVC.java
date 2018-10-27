@@ -16,20 +16,16 @@ public class ServletSpringMVC extends AbstractAnnotationConfigDispatcherServletI
 	protected Class<?>[] getServletConfigClasses() {
 		return new Class[] {AppWebConfiguration.class, JPAConfiguration.class};
 	}
-	
 
 	@Override
 	protected String[] getServletMappings() {
 		return new String[] {"/"};
 	}
-	
-	
-    @Override
+
+	@Override
     protected Filter[] getServletFilters() {
         CharacterEncodingFilter encodingFilter = new CharacterEncodingFilter();
         encodingFilter.setEncoding("UTF-8");
         return new Filter[] {encodingFilter};
     }
-
-    
 }

@@ -19,7 +19,6 @@ public class JPAConfiguration {
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		
 		LocalContainerEntityManagerFactoryBean factoryBean = new LocalContainerEntityManagerFactoryBean();
-		
 		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		factoryBean.setJpaVendorAdapter(vendorAdapter);
 		
@@ -40,7 +39,6 @@ public class JPAConfiguration {
 		
 		return factoryBean;
 	}
-	
 
 	@Bean
 	public JpaTransactionManager transactionManager(EntityManagerFactory emf) {
